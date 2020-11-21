@@ -1,0 +1,52 @@
+{
+  "name": "github-codespaces-typescript",
+  "version": "0.0.1-dev",
+  "description": "Projeto utilizado para apresentação do Github Codespaces.",
+  "main": "./dist/bin/www.js",
+  "engines": {
+    "node": ">=14.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint . --ext .ts,.js",
+    "format": "npx prettier '**/*.ts' '**/*.js' --write",
+    "prebuild": "npx rimraf ./dist",
+    "build": "npx tsc",
+    "build:watch": "npx tsc -w",
+    "start": "node ./dist/bin/www.js",
+    "start:watch": "npx nodemon ./dist/bin/www.js"
+  },
+  "_moduleAliases": {
+    "@app": "dist/src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coder-arena/github-codespaces-typescript.git"
+  },
+  "keywords": [
+    "Node.JS",
+    "TypeScript",
+    "Github Codespaces"
+  ],
+  "author": "Marcos V. Leal <marcosleal@coderarena.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coder-arena/github-codespaces-typescript/issues"
+  },
+  "homepage": "https://github.com/coder-arena/github-codespaces-typescript#readme",
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.9",
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.6",
+    "prettier": "^2.2.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.7"
+  }
+}
