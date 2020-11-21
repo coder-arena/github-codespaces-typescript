@@ -1,0 +1,78 @@
+{
+  "name": "Node.js & TypeScript",
+  "build": {
+    "dockerfile": "Dockerfile",
+    // Update 'VARIANT' to pick a Node version: 10, 12, 14
+    "args": { "VARIANT": "14" }
+  },
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    // Workbench
+    "workbench.colorTheme": "Dracula",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.scrollToSwitchTabs": true,
+    // Terminal Integrado
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.fontSize": 14,
+    // Editor
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 16,
+    "editor.lineHeight": 24,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.largeFileOptimizations": false,
+    "editor.renderLineHighlight": "gutter",
+    "editor.rulers": [80, 120],
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true },
+    // Window
+    "window.zoomLevel": 0,
+    // TypeScript
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // JavaScript
+    "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    // JSON
+    "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    // JSON C
+    "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+    // HTML
+    "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
+    // Markdown
+    "[markdown]": { "editor.defaultFormatter": "yzhang.markdown-all-in-one" },
+    // Linter's
+    "eslint.validate": ["javascript", "typescript"],
+    // Yaml
+    "[yaml]": { "editor.defaultFormatter": "redhat.vscode-yaml" }
+  },
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "bungcip.better-toml",
+    "mikestead.dotenv",
+    "EditorConfig.EditorConfig",
+    "eamodio.gitlens",
+    "yzhang.markdown-all-in-one",
+    "PKief.material-icon-theme",
+    "esbenp.prettier-vscode",
+    "dracula-theme.theme-dracula",
+    "ms-vscode.vscode-typescript-next",
+    "redhat.vscode-yaml",
+    "Shan.code-settings-sync",
+    "lkytal.pomodoro"
+  ],
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "yarn install",
+
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node"
+}
